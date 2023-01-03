@@ -3,7 +3,6 @@
 $id = $_GET["id"];
 echo $id;
 
-// exit;
 
 
 // DB接続
@@ -15,8 +14,8 @@ try {
 }
 
 
-// SQL文を用意
-$stmt = $pdo->prepare("SELECT * FROM  comments  WHERE image_id=:id");//image_idにするのがポイント
+// SQL文　commentsテーブルからimage_idを取得
+$stmt = $pdo->prepare("SELECT * FROM  comments  WHERE image_id=:id");//image_id
 $stmt->bindValue(':id', $id, PDO::PARAM_STR);
 $status = $stmt->execute();
 
@@ -36,7 +35,6 @@ $row = $stmt->fetch();
 
 // //消さない
 }
-
 ?>
 
 
@@ -122,7 +120,7 @@ $row = $stmt->fetch();
         <div class="detailImagButton">
             <button class="updateButton" onclick="location.href='./postImageForm.php?id=<?php echo $_GET['id'];?>';">更新</button>
             <button class="deleteButton" onclick="location.href='../deleteComment.php?id=<?php echo $_GET['id'];?>';">削除</button>
-         </div>
+        </div>
 
      
 

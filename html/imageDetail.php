@@ -80,7 +80,7 @@
         <div class="detailImagButton">
             <button class="updateButton" onclick="location.href='../u_view.php?id=<?php echo $_GET['id'];?>';">更新</button>
             <button class="deleteButton" onclick="location.href='../deleteComment.php?id=<?php echo $_GET['id'];?>';">削除</button>
-         </div>
+        </div>
 
      
 

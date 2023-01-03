@@ -24,7 +24,6 @@ $uri = $_SERVER['REQUEST_URI'];
       $data = $sth->fetchAll();//全部取り出す
     }
 
-
       return $data; //処理を終了させて呼び出し元に値を返す
 
 

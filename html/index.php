@@ -14,7 +14,7 @@
   <?php include('./header.php') ?>
   <h1>投稿者用マイページ</h1>
   <div class="imageList">
-    <?php foreach ($data as $image){?> 
+     <?php foreach ($data as $image){?>  <!--$dataはgetDatas.phpでSELECT文でとってきた画像データ、 $imageは1レコード分のデータが入っている-->
     <a href="./imageDetail.php?id=<?php echo $image['id'];?>"><img src="../images/<?php echo $image['file_name'];?>" alt="投稿画像"></a>
      <?php };?>
 </div>
