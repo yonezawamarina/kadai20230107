@@ -12,6 +12,7 @@
   <?php include('../dbConfig.php') ?>
   <?php include('../getDatas.php') ?>
   <?php include('./header.php') ?>
+
   <h1>投稿者用マイページ</h1>
   <div class="imageList">
      <?php foreach ($data as $image){?>  <!--$dataはgetDatas.phpでSELECT文でとってきた画像データ、 $imageは1レコード分のデータが入っている-->

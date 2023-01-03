@@ -587,3 +587,17 @@ textarea {
   /* float: left;
   width: 50px; */
 }
+
+#comment{
+  display: flex;    
+}
+
+.checkboxTitle{
+  font-weight: bold;
+}
+.a{
+  width: 1000px;
+}
+.b{
+  width: 1000px;
+}

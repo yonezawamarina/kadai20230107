@@ -19,7 +19,7 @@
                   
                 <input type="text" name="search">
 
-                <input type="submit" class="btnsb"  value"array_change_key_case">
+                <input type="submit" class="btnsb"  value="array_change_key_case">
       </form>
     <!-- フォーム↑ここまで -->
 

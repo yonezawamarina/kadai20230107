@@ -5,22 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <style>
-    #comment{
-      display: flex;    
-    }
-
-    .checkboxTitle{
-      font-weight: bold;
-    }
-    .a{
-      width: 1000px;
-    }
-    .b{
-      width: 1000px;
-    }
-
-  </style>
+  
   <title>画像投稿アプリ</title>
 </head>
 <body>
@@ -58,7 +43,6 @@
 
       <div class="submitComment">
         <form action="../postComment.php?image_id=<?php echo $_GET['id']; ?>" method="post" enctype="multipart/form-data">
-         <input type="text"  name="ああああ" >
          <p class="checkboxTitle">症状</p>
          <div class="checkbox">
             <input type="checkbox" name="symptoms[]" value="下痢">下痢
