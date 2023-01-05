@@ -2,7 +2,7 @@
 
 $id = $_GET["id"];
 
-//DB接続のおまじない
+//DB接続
 try {
   //ID:'root', Password: xamppは 空白 ''
   $pdo = new PDO('mysql:dbname=imageposting;charset=utf8;host=localhost', 'root', '');

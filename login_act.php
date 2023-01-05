@@ -3,7 +3,7 @@ session_start();
 $lid =$_POST["lid"];
 $lpw =$_POST["lpw"];
 
-// DB接続のおまじない
+// DB接続
 try {
   //ID:'root', Password: xamppは 空白 ''
   $pdo = new PDO('mysql:dbname=imageposting;charset=utf8;host=localhost', 'root', '');
@@ -34,15 +34,21 @@ if($val["id"] != ""){
   $_SESSION["chk_ssid"] = session_id();
   $_SESSION["u_name"] = $val['u_name'];
   //login処理OKの場合
-  // header("Location: ../html/index.php");
+  $msg = 'ログインしました。';
+  var_dump($msg);
   header('Location: ' . './html/index.php', true, 303);
 
 }else{
   //login処理NGの場合
-// header("Location: ../html/login.php");
+// $msg = 'メールアドレスもしくはパスワードが間違っています。';
+var_dump ("gggg");
 header('Location: ' . './html/login.php', true, 303);
+
 }
-exit();
+
+// exit();
+?>
+
 
 
 
