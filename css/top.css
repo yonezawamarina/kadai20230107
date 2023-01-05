@@ -1,0 +1,122 @@
+/* top.php */
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 3000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 7777;
+	width: 280px;
+}
+
+
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url(../images/inuneko.jpg);
+  background-color: rgba(255,255,255,0.5);
+  /* background-blend-mode: lighten; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+}
+
+.btn-border1,
+.btn-border2
+{
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 40px;
+  width: 220px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-border1:after,
+.btn-border2:after
+ {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.btn-border1:hover:after ,
+.btn-border2:hover:after
+{
+  transform: translate(0, 0);
+}
+
+.btn-border1:active ,
+.btn-border2:active
+{
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btn-border1:hover,
+.btn-border2:hover
+ {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn-border1 ,
+  .btn-border2
+  {
+    padding: 0 40px;
+  }
+}
+
+.btn-border1{
+  margin-bottom: 50px;
+}
+
+.btnwrapper{
+  padding: 50px 30px;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: white;/*背景色*/
+    border-radius: 10px;
+    z-index: 0;
+    background-image: url(hogehoge.jpg);
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+}
+
+

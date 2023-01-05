@@ -61,14 +61,12 @@ $row = $stmt->fetch();
 
     <div class="detailImageBox">
                 <div class="detailImage">
-                <!-- <img src="../images/<?php echo $data['image']['file_name']; ?>" alt="投稿画像"> -->
-                <?php foreach ($data as $image){?>  
-              <!-- <img src="../images/<?php echo $image['file_name'];?>" alt="投稿画像"></a> -->
-              <!-- <a href="../imageDetail.php?id=<?php echo $image['id'];?>"><img src="../images/<?php echo $image['file_name'];?>" alt="投稿画像"></a> -->
-              <!-- <?php };?> -->
-                    <?php echo '<pre>';
-                    var_dump($data);
-                     echo'</pre>'?>;
+           
+          
+                <img src="../images/<?php echo $data[0]['file_name'];?>" alt="投稿画像">
+                <?php var_dump($data[0]['file_name']) ?>;
+              
+
 
                     <div class="detailImagButton">
                       <button class="updateButton" onclick="location.href='./postImageForm.php?id=<?php echo $_GET['id'];?>';">更新</button>

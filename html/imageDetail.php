@@ -43,15 +43,16 @@
 
       <div class="submitComment">
         <form action="../postComment.php?image_id=<?php echo $_GET['id']; ?>" method="post" enctype="multipart/form-data">
-         <p class="checkboxTitle">症状</p>
-         <div class="checkbox">
-            <input type="checkbox" name="symptoms[]" value="下痢">下痢
-            <input type="checkbox" name="symptoms[]" value="便秘">便秘
-            <input type="checkbox" name="symptoms[]" value="皮膚のトラブル">皮膚のトラブル
-            <input type="checkbox" name="symptoms[]" value="心臓のトラブル">心臓のトラブル
-            </br><input type="checkbox" name="symptoms[]" value="肝臓のトラブル">肝臓のトラブル
-            <input type="checkbox" name="symptoms[]" value="泌尿器のトラブル">泌尿器のトラブル
-            <input type="checkbox" name="symptoms[]" value="免疫サポート">免疫サポート
+
+        <div class="checkbox">
+          <p class="checkboxTitle">症状</p>
+              <input type="checkbox" name="symptoms[]" value="下痢">下痢
+              <input type="checkbox" name="symptoms[]" value="便秘">便秘
+              <input type="checkbox" name="symptoms[]" value="皮膚のトラブル">皮膚のトラブル
+              <input type="checkbox" name="symptoms[]" value="心臓のトラブル">心臓のトラブル
+              </br><input type="checkbox" name="symptoms[]" value="肝臓のトラブル">肝臓のトラブル
+              <input type="checkbox" name="symptoms[]" value="泌尿器のトラブル">泌尿器のトラブル
+              <input type="checkbox" name="symptoms[]" value="免疫サポート">免疫サポート
           </div>
 
           <textarea name="comment" id="comment" cols="40" rows="10" placeholder="材料"></textarea>

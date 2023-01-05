@@ -1,0 +1,72 @@
+/* login.php */
+body{
+  background-color: #ffdeda;
+}
+
+.login{
+  display: flex;
+  /* display: block; */
+  flex-direction: column;
+  width: 1500px;
+  justify-content: center;
+
+  align-items: center;
+
+  align-items: center;
+  justify-content: center;
+  background-image: url(hogehoge.jpg);
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: lighten;
+  width: 500px;
+  height: 300px;
+  }
+  
+.id,
+.pw
+{
+  width: 180px;
+  height: 20px;
+}
+
+.sighninbtn {
+  align-items: center;
+  background-color: paleturquoise;
+  border: 1px solid pink;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  /* display: flex; */
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  justify-content: center;
+  line-height: 28px;
+  /* padding: 14px 22px; */
+  text-decoration: none;
+  transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+}
+
+.sighninbtn:active,
+.sighninbtn:hover {
+  outline: 0;
+}
+
+.sighninbtn:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 768px) {
+  .sighninbtn {
+    font-size: 20px;
+    min-width: 100px;
+    padding: 14px 16px;
+  }
+}
+

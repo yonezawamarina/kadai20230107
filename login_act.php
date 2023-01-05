@@ -34,11 +34,16 @@ if($val["id"] != ""){
   $_SESSION["chk_ssid"] = session_id();
   $_SESSION["u_name"] = $val['u_name'];
   //login処理OKの場合
-  header("Location: select.php");
+  // header("Location: ../html/index.php");
+  header('Location: ' . './html/index.php', true, 303);
+
 }else{
   //login処理NGの場合
-header("Location: login.php");
+// header("Location: ../html/login.php");
+header('Location: ' . './html/login.php', true, 303);
 }
 exit();
+
+
 
 
