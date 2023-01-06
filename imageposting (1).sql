@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2023-01-03 03:35:05
+-- 生成日時: 2023-01-05 17:59:12
 -- サーバのバージョン： 10.4.27-MariaDB
 -- PHP のバージョン: 8.1.12
 
@@ -41,9 +41,11 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `image_id`, `comment`, `comment2`, `symptoms`, `create_date`) VALUES
-(42, 28, 'ggg', 'fff', '皮膚のトラブル', '2023-01-02 03:31:00'),
-(43, 31, 'aaaa', 'iiii', '肝臓のトラブル', '2023-01-03 02:09:46'),
-(44, 27, 'てすと', 'てすとてすと', '下痢,便秘,皮膚のトラブル', '2023-01-03 02:14:43');
+(52, 40, '.鮭\r\n・いも\r\n・たまご', '・きる\r\n・ゆでる', '下痢,肝臓のトラブル', '2023-01-05 16:24:14'),
+(53, 39, '・とまと\r\n・大根\r\n・ブロッコリー', '・ゆでる\r\n・もる', '泌尿器のトラブル,免疫サポート', '2023-01-05 16:24:56'),
+(54, 33, '・卵\r\n・鶏肉', '・ゆでる\r\n・もる', '皮膚のトラブル,心臓のトラブル', '2023-01-05 16:25:29'),
+(55, 31, '・人参\r\n・大根', '・煮る\r\n・ゆでる', '皮膚のトラブル,肝臓のトラブル', '2023-01-05 16:25:52'),
+(56, 28, '・白菜\r\n・大根', '・ゆでる\r\n・もる', '便秘,免疫サポート', '2023-01-05 16:26:16');
 
 -- --------------------------------------------------------
 
@@ -62,11 +64,11 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `file_name`, `create_date`) VALUES
-(27, '02.jpg', '2023-01-01 14:47:19'),
 (28, '13309_1.jpeg', '2023-01-01 14:47:25'),
-(29, '9e238a933892ad1ce2e4c83d2ddc848e (1).jpg', '2023-01-01 14:47:31'),
 (31, 'final-1.jpg', '2023-01-01 14:47:47'),
-(33, 'P1050082.jpg', '2023-01-03 02:07:27');
+(33, 'P1050082.jpg', '2023-01-03 02:07:27'),
+(39, '02.jpg', '2023-01-05 16:22:30'),
+(40, '481433bf2f522416da6e3b51045c988a-1280x820.jpg', '2023-01-05 16:22:41');
 
 -- --------------------------------------------------------
 
@@ -86,12 +88,8 @@ CREATE TABLE `user_table` (
 --
 
 INSERT INTO `user_table` (`id`, `u_name`, `u_id`, `u_pw`) VALUES
-(3, '米澤真里奈', '123', '1234'),
 (6, '米澤真里奈', '123', '1234'),
-(7, '米澤真里奈', '123', '1234'),
-(8, '米澤真里奈', '123', '1234'),
-(9, '米澤真里奈', '123', '1234'),
-(11, '米澤真里奈', '123', '123456');
+(12, '田中', '12345', '12345');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -123,19 +121,19 @@ ALTER TABLE `user_table`
 -- テーブルの AUTO_INCREMENT `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID', AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID', AUTO_INCREMENT=57;
 
 --
 -- テーブルの AUTO_INCREMENT `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- テーブルの AUTO_INCREMENT `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
