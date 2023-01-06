@@ -8,9 +8,9 @@
   </div>
 
   <div class="btnwrapper">
-      <button class="btn-border1"  onclick="location.href='./login.php'" >Sighn In</button>
-      <p>会員登録がまだの方はこちらから</p>
-      <button class="btn-border2"  onclick="location.href='../memberRegi.php'">Create Account</button>
+      <button class="btn-border1"  onclick="location.href='./login.php'" >Sign In</button>
+      <p>↓会員登録がまだの方はこちらから</p>
+      <button class="btn-border2"  onclick="location.href='../html/memberRegi.php'">Create Account</button>
   </div>
   
 

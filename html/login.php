@@ -12,10 +12,10 @@
 
 <form  method="post" action="../login_act.php">
     <div class="login">
-      <h1>Sighn In</h1>
+      <h1>Sign In</h1>
         <input type="text" name="lid" placeholder="ID" class="id" ></input><br>
         <input type="text" name="lpw" placeholder="PW" class="pw"></input><br>
-        <input type="submit" value="Sighn In" class="sighninbtn">
+        <input type="submit" value="Sign In" class="sighninbtn">
     </div>
 </form>
 
