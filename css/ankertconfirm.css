@@ -2,10 +2,11 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
 }
 button ,
 .inputsyusei{
-  background-color: rgb(228, 215, 171);
+  background-color: yellow;
   border-radius: 4px;
   border-style: none;
   box-sizing: border-box;
@@ -38,4 +39,7 @@ button:focus,
 .inputsyusei:focus
  {
   opacity: .75;
+}
+.answer{
+  border-bottom: solid;
 }

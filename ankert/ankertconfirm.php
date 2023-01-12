@@ -35,27 +35,27 @@ $naiyou = $_POST['naiyou'];
             <div>
                 <div>
                     <label>お名前</label>
-                    <p><?php echo $namea; ?></p>
-                </div>
-                <div>
-                    <label>ふりがな</label>
-                    <p><?php echo $address; ?></p>
+                    <p class="answer"><?php echo $namea; ?></p>
                 </div>
                 <div>
                     <label>メールアドレス</label>
-                    <p><?php echo $tel; ?></p>
+                    <p class="answer"><?php echo $address; ?></p>
                 </div>
                 <div>
                     <label>電話番号</label>
-                    <p><?php echo $dogname; ?></p>
+                    <p class="answer"><?php echo $tel; ?></p>
                 </div>
                 <div>
                     <label>犬の名前</label>
-                    <p><?php echo $koumoku ?></p>
+                    <p class="answer"><?php echo $dogname; ?></p>
                 </div>
                 <div>
-                    <label>お問い合わせ項目</label>
-                    <p><?php echo $naiyou; ?></p>
+                    <label>相談項目</label>
+                    <p class="answer"><?php echo $koumoku ?></p>
+                </div>
+                <div>
+                    <label>相談内容</label>
+                    <p class="answer"><?php echo $naiyou; ?></p>
                 </div>
              
             </div>

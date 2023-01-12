@@ -31,8 +31,8 @@ loginCheck();
     <label>メールアドレス</label><input type="text" name="address"><br/>
     <label>電話番号</label><input type="text" name="tel"><br/>
     <label>犬のお名前</label><input type="text" name="dogname"><br/>
-    <label>お問い合わせ項目</label><input type="text" name="koumoku"><br/>
-    <label>お問い合わせ内容</label><input type="text" name="naiyou">
+    <label>お問い合わせ項目</label><textarea type="text" name="koumoku"></textarea><br/>
+    <label>お問い合わせ内容</label><textarea type="text" name="naiyou"></textarea><br/>
 
     
     <h3>内容が宜しければ、内容確認ボタンを押してください。</h3>
