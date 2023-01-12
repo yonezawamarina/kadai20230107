@@ -35,19 +35,14 @@ if($val["id"] != ""){
   $_SESSION["u_name"] = $val['u_name'];
   //login処理OKの場合
   $msg = 'ログインしました。';
-   header('Location: ' . './ankert/ankert.php', true, 303);
+   header('Location: ' . '../ankert/ankert.php', true, 303);
 
 }else{
   //login処理NGの場合
 // $msg = 'メールアドレスもしくはパスワードが間違っています。';
-header('Location: ' . './ankert/ankertlogin.php', true, 303);
+header('Location: ' . '../ankert/ankertlogin.php', true, 303);
 
 }
 
 // exit();
 ?>
-
-
-
-
-

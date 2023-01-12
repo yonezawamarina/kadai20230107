@@ -1,5 +1,6 @@
 <?php
 session_start();
+// $u_namename =$_SESSION["u_namename"];
 $username =$_SESSION["u_name"];
 
 $msg = 'こんにちは'. htmlspecialchars($username, \ENT_QUOTES, 'UTF-8') . ' さん </br>わんちゃんが元気になりますように';

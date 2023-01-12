@@ -40,7 +40,7 @@ if ($status === false) {
   exit('ErrorMessage:'.$error[2]);
 } else {
   //index.phpへリダイレクト
-  header('Location: ' . './html/login.php', true, 303);
+  header('Location: ' . './ankert/ankert.php', true, 303);
 }
 
 
@@ -54,39 +54,6 @@ if ($status === false) {
   //５．index.phpへリダイレクト
   header('Location:' . './html/index.php',true,303);
 }
-
-
-// //抽出データ数を取得
-// $val = $stmt->fetch();//1レコードだけ取得する方法
-
-
-
-
-
-
-
-
-
-// //該当レコードがあればSESSIONに値を代入
-// if($val["id"] != ""){
-//   $_SESSION["chk_ssid"] = session_id();
-//   $_SESSION["u_name"] = $val['u_name'];
-//   var_dump('fff');
-  //login処理OKの場合
-  // $msg = 'ログインしました。';
-  // var_dump($msg);
-  // header('Location: ' . './html/index.php', true, 303);
-
-// }else{
-  //login処理NGの場合
-// $msg = 'メールアドレスもしくはパスワードが間違っています。';
-// var_dump ("gggg");
-// header('Location: ' . './html/login.php', true, 303);
-
-// }
-
-
-
 
 
 

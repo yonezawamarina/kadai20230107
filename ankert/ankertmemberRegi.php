@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   </style>
-  <link rel="stylesheet" href="../css/memberRegi.css">
+  <link rel="stylesheet" href="../css/ankertmemberRegi.css">
   <title>Create Account</title>
 </head>
 <body>
