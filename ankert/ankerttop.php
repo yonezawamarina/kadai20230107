@@ -10,8 +10,10 @@
   <div class="btnwrapper">
       <p>飼い主ログインはこちらから</p>
       <button class="btn-border1"  onclick="location.href='./ankertlogin.php'" >Sign In</button>
+      <p>相談フォームはこちらから</p>
+      <button class="btn-border1"  onclick="location.href='./ankert.php'" >こちら</button>
       <p>病院ログインはこちらから</p>
-      <button class="btn-border1"  onclick="location.href='./ankertselect.php'" >Sign In</button>
+      <button class="btn-border1"  onclick="location.href='./ankertloginmedical.php'" >Sign In</button>
   </div>
   
 

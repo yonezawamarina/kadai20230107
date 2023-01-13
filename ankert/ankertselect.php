@@ -1,4 +1,10 @@
 <?php
+session_start();
+require_once('funcs.php');
+loginCheck();
+
+
+
 function h($str)
 {
   return htmlspecialchars($str, ENT_QUOTES);//dbの中に入ることは問題なくHTMLで表示されるのを防ぐためにやる
@@ -95,10 +101,6 @@ $view.="
     
     <?= $view ?></table>  <!-- 26行目のview -->   
 </div> 
-
-<div class="b">
-    <button class="btn-border"  onclick="location.href='ankert.php'">TOP</button>
-</div>
 
 </body>
 </html>
