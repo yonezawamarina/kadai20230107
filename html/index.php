@@ -21,6 +21,9 @@ $msg = 'こんにちは'. htmlspecialchars($username, \ENT_QUOTES, 'UTF-8') . ' 
   <?php include('../dbConfig.php') ?>
   <?php include('../getDatas.php') ?>
   <?php include('./header.php') ?>
+  <header>
+<div class="navbar-header"><a class="navbar-brand" href="../ankert/ankertlogout.php">ログアウト</a></div>
+</header>
 
   <h1><?php echo $msg; ?></h1>
 

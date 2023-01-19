@@ -6,6 +6,7 @@ $tel = $_POST['tel'];
 $dogname = $_POST['dogname'];
 $koumoku = $_POST['koumoku'];
 $naiyou = $_POST['naiyou'];
+$syokuyoku = implode(',', $_POST['syokuyoku']);//これでcheckboxをDBに入れられた！
 
 ?>
 
@@ -29,6 +30,7 @@ $naiyou = $_POST['naiyou'];
             <input type="hidden" name="dogname" value="<?php echo $dogname; ?>">
             <input type="hidden" name="koumoku" value="<?php echo $koumoku; ?>">
             <input type="hidden" name="naiyou" value="<?php echo $naiyou; ?>">
+            <input type="hidden" name="syokuyoku" value="<?php echo $syokuyoku; ?>">
           
             <h1 class="contact-title">お問い合わせ 内容確認</h1>
             <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
@@ -56,6 +58,11 @@ $naiyou = $_POST['naiyou'];
                 <div>
                     <label>相談内容</label>
                     <p class="answer"><?php echo $naiyou; ?></p>
+                </div>
+
+                <div>
+                    <label>食欲</label>
+                    <p class="answer"><?php echo $syokuyoku; ?></p>
                 </div>
              
             </div>

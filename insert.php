@@ -15,81 +15,52 @@ try {
 }
 
 
-//データ登録SQL作成
-$stmt = $pdo->prepare("INSERT INTO
-user_table(id, u_name, u_id, u_pw)
-VALUES(NULL, :u_name, :u_id, :u_pw)");
+//登録したidがすでに登録されていないかチェック
 
-
-//バインド変数を用意
-// Integer 数値の場合 PDO::PARAM_INT
-// String文字列の場合 PDO::PARAM_STR
-$stmt->bindValue(':u_name', $u_name, PDO::PARAM_STR);
-$stmt->bindValue(':u_id', $u_id, PDO::PARAM_STR);
-$stmt->bindValue(':u_pw', $u_pw, PDO::PARAM_STR);
-// $stmt->bindValue(':img', $img, PDO::PARAM_STR);
-
-// 実行
-$status = $stmt->execute();
-
-
-//データ登録処理後
-if ($status === false) {
-  //SQL実行時にエラーがある場合（エラーオブジェクト取得して表示）
-  $error = $stmt->errorInfo();
-  exit('ErrorMessage:'.$error[2]);
+$sql = "SELECT * FROM user_table WHERE u_id = :u_id";
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':u_id', $u_id);
+$stmt->execute();
+$member = $stmt->fetch();
+if ($member['u_id'] === $u_id) {
+    $msg = '同じメールアドレスが存在します。';
+    $link = '<a href="./ankert/ankertmemberRegi.php">戻る</a>';
 } else {
-  //index.phpへリダイレクト
-  header('Location: ' . './html/login.php', true, 303);
+    //登録されていなければinsert 
+    $sql = "INSERT INTO user_table(id, u_name, u_id, u_pw) VALUES(NULL, :u_name, :u_id, :u_pw)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':u_name', $u_name, PDO::PARAM_STR);
+    $stmt->bindValue(':u_id', $u_id, PDO::PARAM_STR);
+    $stmt->bindValue(':u_pw', $u_pw, PDO::PARAM_STR);
+    $stmt->execute();
+    $msg = '会員登録が完了しました';
+    $link = '<a href="./ankert/ankertlogin.php">ログインページ</a>';
 }
-
-
-
-//SQL実行後にエラーがある場合
-if ($status === false) {
-  //SQL実行時にエラーがある場合（エラーオブジェクト取得して表示）
-  $error = $stmt->errorInfo();
-  exit('ErrorMessage:'.$error[2]);
-} else {
-  //５．index.phpへリダイレクト
-  header('Location:' . './html/index.php',true,303);
-}
-
-
-// //抽出データ数を取得
-// $val = $stmt->fetch();//1レコードだけ取得する方法
-
-
-
-
-
-
-
-
-
-// //該当レコードがあればSESSIONに値を代入
-// if($val["id"] != ""){
-//   $_SESSION["chk_ssid"] = session_id();
-//   $_SESSION["u_name"] = $val['u_name'];
-//   var_dump('fff');
-  //login処理OKの場合
-  // $msg = 'ログインしました。';
-  // var_dump($msg);
-  // header('Location: ' . './html/index.php', true, 303);
-
-// }else{
-  //login処理NGの場合
-// $msg = 'メールアドレスもしくはパスワードが間違っています。';
-// var_dump ("gggg");
-// header('Location: ' . './html/login.php', true, 303);
-
-// }
-
-
-
-
-
-
-
 ?>
+
+<h1><?php echo $msg; ?></h1><!--メッセージの出力-->
+<?php echo $link; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

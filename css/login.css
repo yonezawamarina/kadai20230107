@@ -4,7 +4,8 @@ body{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffdeda;;
+      /* background-color: #ffdeda; */
+      background-color: #efdbc0;
 }
 
 .login{

@@ -1,9 +1,9 @@
 <?php
 include('./dbConfig.php');
-$imageId = $_GET['image_id'];
+$imageId = $_GET['image_id'];$symptoms = implode(',', $_POST['symptoms']);//これでcheckboxをDBに入れられた！
 $comment = $_POST['comment'];
 $comment2 = $_POST['comment2'];
-$symptoms = implode(',', $_POST['symptoms']);//これでcheckboxをDBに入れられた！
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($comment) && !empty($comment2)) {
   $insert = $db->query("INSERT INTO comments (image_id, comment , comment2, symptoms)

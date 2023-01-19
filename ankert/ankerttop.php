@@ -3,19 +3,36 @@
   <link rel="stylesheet" href="../css/top.css">
 </head>
 <body>
+
+
+<div class="header">
+    <div class="container">
+      <div id="logo">
+      </div>
+      <ul class="nav">
+        <li><a href="../ankert/ankertmemberRegi.php">新規会員登録</a></li>
+        <li><a href="./ankertlogin.php">Login</a></li>
+        <li><a href="./ankertloginmedical.php">動物病院専用</a></li>
+        <li><a href="./ankert.php">食事相談フォーム</a></li>
+      </ul>
+    </div>
+  </di
+
+
+
   <div class="start">
       <p><img src="/images/dogfoods.jpg" alt=""></p>
   </div>
 
-  <div class="btnwrapper">
-      <p>飼い主ログインはこちらから</p>
-      <button class="btn-border1"  onclick="location.href='./ankertlogin.php'" >Sign In</button>
-      <p>相談フォームはこちらから</p>
-      <button class="btn-border1"  onclick="location.href='./ankert.php'" >こちら</button>
-      <p>病院ログインはこちらから</p>
-      <button class="btn-border1"  onclick="location.href='./ankertloginmedical.php'" >Sign In</button>
+  <div class="neato-header">
+  <h2>Your Subtitle</h2>
+  <h1>Your Headline</h1>
+</div>
+  <!-- <div class="btnwrapper">
+      <p>わんちゃんご家族様ログインはこちらから</p>
+      
   </div>
-  
+   -->
 
 
  
@@ -29,6 +46,9 @@
       $('.start').fadeOut(500);
     },900); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
   });
+
+
+
   
   </script>
 

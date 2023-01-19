@@ -6,9 +6,8 @@ $tel = $_POST['tel'];
 $dogname = $_POST['dogname'];
 $koumoku = $_POST['koumoku'];
 $naiyou = $_POST['naiyou'];
-
-
-
+$syokuyoku = $_POST['syokuyoku'];
+// $syokuyoku = implode(',', $_POST['syokuyoku']);//これでcheckboxをDBに入れられた！
 
 
 
@@ -29,8 +28,8 @@ try {
 //                         VALUES(NULL, :feeling, :text, :img, sysdate() )");
 
 $stmt = $pdo->prepare("INSERT INTO
-ankert(id, namea, address, tel, dogname, koumoku, naiyou,  date)
-VALUES(NULL, :namea, :address, :tel, :dogname, :koumoku, :naiyou, sysdate() )");
+ankert(id, namea, address, tel, dogname, koumoku, naiyou, syokuyoku,  date)
+VALUES(NULL, :namea, :address, :tel, :dogname, :koumoku, :naiyou, :syokuyoku, sysdate() )");
 
 
 
@@ -43,6 +42,7 @@ $stmt->bindValue(':tel', $tel, PDO::PARAM_INT);
 $stmt->bindValue(':dogname', $dogname, PDO::PARAM_STR);
 $stmt->bindValue(':koumoku', $koumoku, PDO::PARAM_STR);
 $stmt->bindValue(':naiyou', $naiyou, PDO::PARAM_STR);
+$stmt->bindValue(':syokuyoku', $syokuyoku, PDO::PARAM_STR);
 
 
 //  (3). 実行

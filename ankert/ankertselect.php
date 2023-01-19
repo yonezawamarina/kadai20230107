@@ -87,6 +87,8 @@ $view.="
 
 </header>
 <div class="a">
+  <h1>食事相談依頼一覧</h1>
+  <h2>未完了分</h2>
     <table border="1" class="table">
 
         <tr>

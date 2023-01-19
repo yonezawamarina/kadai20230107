@@ -17,26 +17,54 @@
 <body>
   
 <header>
-	<h1>犬の食事ご相談フォーム</h1>
+
 </header>
 
 
-<div><h2>お問い合わせ</h2></div>
-<div>
-    <form action="ankertconfirm.php" method="post">
-    
-    <label>名前</label><input type="text" name="namea"><br/>
-    <label>メールアドレス</label><input type="text" name="address"><br/>
-    <label>電話番号</label><input type="text" name="tel"><br/>
-    <label>犬のお名前</label><input type="text" name="dogname"><br/>
-    <label>お問い合わせ項目</label><textarea type="text" name="koumoku"></textarea><br/>
-    <label>お問い合わせ内容</label><textarea type="text" name="naiyou"></textarea><br/>
 
-    
-    <h3>内容が宜しければ、内容確認ボタンを押してください。</h3>
-        <button type="submit" name="submit">内容確認</button>
-    </form>
-</div>
+<form action="ankertconfirm.php" method="post">
+  <h1>食事相談フォーム</h1>
+  <div>
+    <label><span>必須</span>名前</label>
+    <input type="text" name="namea" class="text" size="45" value="" />
+  </div>
+             
+  <div>
+    <label><span>必須</span>メールアドレス</label>
+    <input type="text" name="address" class="text" size="45" value="" />
+  </div>
+
+  <div>
+    <label><span>必須</span>電話番号</label>
+    <input type="text" name="tel" class="text" size="45" value="" />
+  </div>
+
+  <div>
+    <label><span>必須</span>犬のお名前</label>
+    <input type="text" name="dogname" class="text" size="45" value="" />
+  </div>
+          
+  <div class="checkbox">
+          <p class="checkboxTitle">食欲について</p>
+              <input type="checkbox" name="syokuyoku[]" value="すぐに完食する">すぐに完食する
+              <input type="checkbox" name="syokuyoku[]" value="30分以内には食べきる">30分以内には食べきる
+              <input type="checkbox" name="syokuyoku[]" value="あまり食欲がない。完食はしない。">あまり食欲がない。完食はしない。
+          </div>
+ 
+  <div>
+    <label>お問い合わせ項目</label>
+    <textarea cols="60" rows="5" name="koumoku" id="comments"></textarea>
+  </div>
+
+  <div>
+    <label>お問い合わせ内容</label>
+    <textarea cols="60" rows="5" name="naiyou" id="comments"></textarea>
+  </div>
+  <div>
+    <button type="submit" name="submit">内容確認</button>
+  </div>
+</form>
+
 
 
 
